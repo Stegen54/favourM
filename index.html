@@ -3,47 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Happy Birthday Favour!</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+<!-- HTML Meta Tags -->
+<title>Happy Birthday Favour💞💐</title>
+<meta name="description" content="La vie est belle✨😁
+Welcome to the best year of your life yet.">
+
+<!-- Facebook Meta Tags -->
+<meta property="og:url" content="https://clara-tdsa.onrender.com">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Happy Birthday Favour💞💐">
+<meta property="og:description" content="La vie est belle✨😁
+Welcome to the best year of your life yet.">
+<meta property="og:image" content="https://opengraph.b-cdn.net/production/images/9bc7754f-aa99-4d47-b28b-37f9e0f6069f.jpg?token=wZnQnJYLGKTts926owXPjXDyoErqtnhVPL7ioveE60Y&height=1066&width=1080&expires=33261092380">
+
+<!-- Twitter Meta Tags -->
+<meta name="twitter:card" content="summary_large_image">
+<meta property="twitter:domain" content="clara-tdsa.onrender.com">
+<meta property="twitter:url" content="https://clara-tdsa.onrender.com">
+<meta name="twitter:title" content="Happy Birthday Favour💞💐">
+<meta name="twitter:description" content="La vie est belle✨😁
+Welcome to the best year of your life yet.">
+<meta name="twitter:image" content="https://opengraph.b-cdn.net/production/images/9bc7754f-aa99-4d47-b28b-37f9e0f6069f.jpg?token=wZnQnJYLGKTts926owXPjXDyoErqtnhVPL7ioveE60Y&height=1066&width=1080&expires=33261092380">
+
+<!-- Meta Tags Generated via https://www.opengraph.xyz -->
 </head>
 <body>
-    <div id="heartParticles"></div>
-
     <div class="countdown-container">
-        <button id="startButton">Click Me</button>
-        <div id="countdown">3</div>
+        <button id="startButton">Click Me🤍🥰🦥</button>
+        <div id="countdown" style="display: none;">3</div>
     </div>
-
-    <div id="mainContent" style="display: none;">
-        <!-- <audio id="personalMessage" src="message.mp3" type="audio/mp3"></audio> -->
-        <audio id="birthdaySong" src="birthday.mp3" type="audio/mp3" loop></audio>
-
-         <!-- Image Section -->
-        <div class="photo-container">
-            <img src="image.jng" alt="Clara's Photo" class="rounded-photo">
-        </div>
-        <div class="message">
-            <h1 id="friendName">Happy Birthday, Favour🥰🤍🩷!</h1>
-            <p>You've been an amazing person ever since,I love you!🎉</p>
-        </div>
-
-        <div id="typedMessage" style="display: none;"></div>
-
-        <div class="balloon-container">
+    <div class="container" id="mainContent" style="display: none;">
+        <div class="balloons">
             <div class="balloon" id="b1"></div>
             <div class="balloon" id="b2"></div>
             <div class="balloon" id="b3"></div>
             <div class="balloon" id="b4"></div>
             <div class="balloon" id="b5"></div>
         </div>
-
-        <div class="music-controls">
-            <button onclick="document.getElementById('birthdaySong').pause()">Pause Music</button>
-            <button onclick="document.getElementById('birthdaySong').play()">Play Music</button>
+        <div class="message">
+            <img src="image.png" alt="Doreen" class="profile-pic">
+            <h1>Happy Birthday, <span id="friendName">Favour🥰🤍🩷💞💐</span>!</h1>
+            <p>Wishing you a day filled with love, joy, and all your favorite things😊🤍🥰🦥</p>
+            <p>May this year be even more wonderful and blessed.</p>
+            <p>I Love you so much Favour!🥰🤍🩷💞💐</p>
         </div>
+        
+        
     </div>
-
+    <audio id="birthdaySong" src="birthday.mp3" type="audio/mp3"></audio>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
