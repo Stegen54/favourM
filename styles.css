@@ -17,6 +17,7 @@ body {
     height: 100vh;
     font-size: 5em;
     color: #fff;
+    text-align: center;
 }
 
 .container {
@@ -39,6 +40,8 @@ body {
     top: 0;
     width: 100%;
     height: 200px;
+    pointer-events: none;
+    z-index: 1;
 }
 
 .balloon {
@@ -81,25 +84,27 @@ body {
 }
 
 .message {
-    margin-top: 200px;
+    margin-top: 50px;
+    color: #fff;
+    z-index: 2; /* Ensures text appears above balloons */
 }
 
 .message h1 {
     font-size: 2.5em;
-    color: #fff;
+    color: #ffffff;
     margin-top: 10px;
 }
 
 .message p {
     font-size: 1.2em;
-    color: #fff;
+    color: #ffffff;
 }
 
 #startButton {
     padding: 10px 20px;
     font-size: 1.5em;
     color: #fff;
-    background-color: #ff99cc;
+    background-color: #ff6699;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -107,7 +112,11 @@ body {
 }
 
 #startButton:hover {
-    background-color: #ff6699;
+    background-color: #ff3366;
+}
+
+#countdown {
+    color: #ffffff;
 }
 
 .profile-pic {
