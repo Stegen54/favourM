@@ -15,17 +15,11 @@ document.addEventListener('DOMContentLoaded', function() {
             if (countdown === 0) {
                 clearInterval(countdownInterval);
                 document.querySelector('.countdown-container').style.display = 'none';
-                const mainContent = document.getElementById('mainContent');
-                mainContent.style.display = 'block';
-                mainContent.classList.add('visible');
+                document.getElementById('mainContent').style.display = 'block';
                 birthdaySong.play();
                 launchConfetti();
             }
         }, 1000);
-    });
-
-    document.getElementById('wishButton').addEventListener('click', function() {
-        alert('Your wish has been made! 🎉');
     });
 });
 
