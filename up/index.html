@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Favour!</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+</head>
+<body>
+    <div id="heartParticles"></div>
+
+    <div class="countdown-container">
+        <button id="startButton">Click Me</button>
+        <div id="countdown">3</div>
+    </div>
+
+    <div id="mainContent" style="display: none;">
+        <!-- <audio id="personalMessage" src="message.mp3" type="audio/mp3"></audio> -->
+        <audio id="birthdaySong" src="birthday.mp3" type="audio/mp3" loop></audio>
+
+         <!-- Image Section -->
+        <div class="photo-container">
+            <img src="image.jng" alt="Clara's Photo" class="rounded-photo">
+        </div>
+        <div class="message">
+            <h1 id="friendName">Happy Birthday, Favour🥰🤍🩷!</h1>
+            <p>You've been an amazing person ever since,I love you!🎉</p>
+        </div>
+
+        <div id="typedMessage" style="display: none;"></div>
+
+        <div class="balloon-container">
+            <div class="balloon" id="b1"></div>
+            <div class="balloon" id="b2"></div>
+            <div class="balloon" id="b3"></div>
+            <div class="balloon" id="b4"></div>
+            <div class="balloon" id="b5"></div>
+        </div>
+
+        <div class="music-controls">
+            <button onclick="document.getElementById('birthdaySong').pause()">Pause Music</button>
+            <button onclick="document.getElementById('birthdaySong').play()">Play Music</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
