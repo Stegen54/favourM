@@ -24,6 +24,16 @@ body {
     padding: 20px;
 }
 
+#mainContent {
+    display: none;
+    opacity: 0;
+    transition: opacity 1s ease-in;
+}
+
+.visible {
+    opacity: 1;
+}
+
 .balloons {
     position: absolute;
     top: 0;
@@ -41,6 +51,7 @@ body {
     border-radius: 50%;
     box-shadow: inset -15px -10px 30px rgba(255, 255, 255, 0.5);
     animation: float 6s ease-in-out infinite, rotate 6s linear infinite, drift 6s ease-in-out infinite;
+    animation-duration: calc(4s + (6 * var(--random)));
 }
 
 .balloon:before {
@@ -54,70 +65,58 @@ body {
     transform: translateX(-50%);
 }
 
-#b1 {
-    left: 20%;
-    animation-delay: 0s;
-}
-
-#b2 {
-    left: 40%;
-    animation-delay: 1s;
-}
-
-#b3 {
-    left: 60%;
-    animation-delay: 2s;
-}
-
-#b4 {
-    left: 80%;
-    animation-delay: 3s;
-}
-
-#b5 {
-    left: 10%;
-    animation-delay: 4s;
-}
-
 @keyframes float {
-    0%, 100% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-50px);
-    }
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-50px); }
 }
 
 @keyframes rotate {
-    0%, 100% {
-        transform: rotate(0deg);
-    }
-    50% {
-        transform: rotate(15deg);
-    }
-} /* Closing brace was missing */
+    0%, 100% { transform: rotate(0deg); }
+    50% { transform: rotate(15deg); }
+}
 
 @keyframes drift {
-    0%, 100% {
-        transform: translateX(0);
-    }
-    50% {
-        transform: translateX(20px);
-    }
+    0%, 100% { transform: translateX(0); }
+    50% { transform: translateX(20px); }
 }
 
 .message {
-    margin-top: 200px; /* Ensures the message is below the balloons */
+    margin-top: 200px;
 }
 
 .message h1 {
     font-size: 2.5em;
     color: #fff;
+    margin-top: 10px;
 }
 
 .message p {
     font-size: 1.2em;
     color: #fff;
+}
+
+#startButton {
+    padding: 10px 20px;
+    font-size: 1.5em;
+    color: #fff;
+    background-color: #ff99cc;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#startButton:hover {
+    background-color: #ff6699;
+}
+
+.profile-pic {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    object-fit: cover;
 }
 
 @media (max-width: 768px) {
@@ -137,47 +136,4 @@ body {
         width: 70px;
         height: 105px;
     }
-}
-#startButton {
-    padding: 10px 20px;
-    font-size: 1.5em;
-    color: #fff;
-    background-color: #ff99cc;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-#startButton:hover {
-    background-color: #ff6699;
-}
-
-.countdown-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    font-size: 5em;
-    color: #fff;
-}
-.profile-pic {
-    width: 250px;
-    height: 250px;
-    border-radius: 50%;
-    margin-bottom: 10px; /* Reduce this value to bring text closer to the image */
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-    object-fit: cover;
-}
-
-.message h1 {
-    margin-top: 10px; /* Optional: Reduce this value if further adjustment is needed */
-    font-size: 2.5em;
-    color: #fff;
-}
-
-.message p {
-    font-size: 1.2em;
-    color: #fff;
 }
